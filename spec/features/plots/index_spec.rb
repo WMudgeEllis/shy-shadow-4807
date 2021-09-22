@@ -66,14 +66,5 @@ RSpec.describe 'plot index page' do
      within("##{plot_2.number}-plants") do
        expect(page).to have_content(plant_3.name)
      end
-
    end
 end
-#
-# When I visit a plot's index page
-# Next to each plant's name
-# I see a link to remove that plant from that plot
-# When I click on that link
-# I'm returned to the plots index page
-# And I no longer see that plant listed under that plot
-# (Note: you should not destroy the plant record entirely)
