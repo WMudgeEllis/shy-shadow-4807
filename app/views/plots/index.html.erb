@@ -5,7 +5,10 @@
       <%= plot.number %>
       <section id="<%= plot.number %>-plants">
         <% plot.plants.each do |plant| %>
-          <p><%= plant.name %></p>
+          <p>
+            <%= plant.name %>
+            <%= button_to "remove #{plant.name} from plot", "/plots/#{plot.id}/plants/#{plant.id}", method: :delete %>
+          </p>
         <% end %>
       </section>
     </ol>
