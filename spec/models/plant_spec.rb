@@ -18,6 +18,6 @@ RSpec.describe Plant do
 
     plot_plant = PlotPlant.create!(plot: plot_1, plant: plant_1)
 
-    expect(plant_1.fetch_plot_plant).to eq(plot_plant)
+    expect(plant_1.fetch_plot_plant(plot_1.id)).to eq(plot_plant)
   end
 end
