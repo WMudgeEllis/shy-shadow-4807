@@ -4,7 +4,7 @@ RSpec.describe Plant do
 
   describe 'relationships' do
     it { should have_many(:plot_plants) }
-    it { should have_many(:plants).through(:plot_plants) }
+    it { should have_many(:plots).through(:plot_plants) }
   end
 
 
