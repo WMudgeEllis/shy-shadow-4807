@@ -53,8 +53,8 @@ RSpec.describe 'plot index page' do
 
      within("##{plot_1.number}-plants") do
        expect(page).to have_content(plant_3.name)
-       expect(page).to have_button('remove from plot')
-       click_button 'remove from plot'
+       expect(page).to have_button("remove #{plant_3.name} from plot")
+       click_button "remove #{plant_3.name} from plot"
      end
 
      expect(current_path).to eq(plots_path)
