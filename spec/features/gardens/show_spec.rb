@@ -30,7 +30,7 @@ RSpec.describe 'garden show page' do
     expect(page).to_not have_content(plant_4.name)
   end
 
-  xit 'can show only short harves times' do
+  it 'can show only short harvest times' do
     garden = Garden.create!(name: 'awesome space', organic: true)
     plot_1 = garden.plots.create!(number: 35, size: 'Bigly', direction: 'up')
     plot_2 = garden.plots.create!(number: 20, size: 'Smally', direction: 'down')
